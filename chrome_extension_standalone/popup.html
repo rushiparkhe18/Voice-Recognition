@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Control - Standalone</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      text-align: center;
+    }
+    
+    .subtitle {
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+    
+    .status {
+      background: rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .status-text {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .status-subtext {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 10px;
+    }
+    
+    #startBtn {
+      background: #00ff00;
+      color: #000;
+    }
+    
+    #startBtn:hover {
+      background: #00cc00;
+      transform: scale(1.05);
+    }
+    
+    #stopBtn {
+      background: #ff4444;
+      color: white;
+      display: none;
+    }
+    
+    #stopBtn:hover {
+      background: #cc0000;
+      transform: scale(1.05);
+    }
+    
+    #helpBtn {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      font-size: 14px;
+      padding: 10px;
+    }
+    
+    #helpBtn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .info {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    
+    .info h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+    }
+    
+    .info ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+    
+    .info li {
+      margin: 5px 0;
+    }
+    
+    .listening-indicator {
+      display: none;
+      text-align: center;
+      margin: 15px 0;
+    }
+    
+    .listening-indicator.active {
+      display: block;
+    }
+    
+    .pulse {
+      width: 60px;
+      height: 60px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+    }
+    
+    .no-python {
+      background: rgba(0,255,0,0.2);
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+    
+    .command-heard {
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: none;
+      font-size: 12px;
+    }
+    
+    .command-heard.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎤 Voice Control</h1>
+  <div class="subtitle">Standalone - No Python Required!</div>
+  
+  <div class="no-python">
+    ✅ Works entirely in browser - Just click Start!
+  </div>
+  
+  <div class="status">
+    <div class="status-text" id="statusText">Ready</div>
+    <div class="status-subtext" id="statusSubtext">Click Start to begin</div>
+  </div>
+  
+  <div class="listening-indicator" id="listeningIndicator">
+    <div class="pulse"></div>
+    <div>🎙️ Listening...</div>
+  </div>
+  
+  <button id="startBtn">🎤 Start Voice Control</button>
+  <button id="stopBtn">⏹️ Stop Voice Control</button>
+  <button id="helpBtn">❓ Microphone Not Working? Click Here</button>
+  
+  <div class="command-heard" id="commandHeard">
+    <strong>Heard:</strong> <span id="commandText">-</span><br>
+    <strong>Action:</strong> <span id="actionText">-</span>
+  </div>
+  
+  <div class="info">
+    <h3>📋 Quick Commands:</h3>
+    <ul>
+      <li><strong>scroll down / up</strong></li>
+      <li><strong>go back / forward</strong></li>
+      <li><strong>new tab / close tab</strong></li>
+      <li><strong>read page</strong></li>
+      <li><strong>search google for [query]</strong></li>
+      <li><strong>open first link</strong></li>
+    </ul>
+    <div style="margin-top: 10px; font-size: 11px; opacity: 0.8;">
+      💡 Speak clearly and wait for confirmation
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

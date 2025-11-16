@@ -1,0 +1,301 @@
+command,intent
+scroll down,SCROLL_DOWN
+move the page down,SCROLL_DOWN
+go down,SCROLL_DOWN
+scroll the screen down,SCROLL_DOWN
+take me lower,SCROLL_DOWN
+move down,SCROLL_DOWN
+page down,SCROLL_DOWN
+slide down,SCROLL_DOWN
+go further down,SCROLL_DOWN
+bring the page lower,SCROLL_DOWN
+read this,READ_SECTION
+read the page,READ_SECTION
+read aloud,READ_SECTION
+read content,READ_SECTION
+start reading,READ_SECTION
+read what’s on screen,READ_SECTION
+speak this page,READ_SECTION
+narrate this,READ_SECTION
+read text here,READ_SECTION
+tell me what’s written,READ_SECTION
+refresh,REFRESH_PAGE
+reload page,REFRESH_PAGE
+reload this tab,REFRESH_PAGE
+refresh the site,REFRESH_PAGE
+reload now,REFRESH_PAGE
+restart the page,REFRESH_PAGE
+update the page,REFRESH_PAGE
+reload browser,REFRESH_PAGE
+refresh screen,REFRESH_PAGE
+refresh this site,REFRESH_PAGE
+open new tab,NEW_TAB
+make a new tab,NEW_TAB
+create new tab,NEW_TAB
+start another tab,NEW_TAB
+new tab please,NEW_TAB
+add a tab,NEW_TAB
+launch a new tab,NEW_TAB
+open fresh tab,NEW_TAB
+create another tab,NEW_TAB
+one more tab,NEW_TAB
+close tab,CLOSE_TAB
+close this tab,CLOSE_TAB
+shut this tab,CLOSE_TAB
+remove tab,CLOSE_TAB
+end tab,CLOSE_TAB
+kill this tab,CLOSE_TAB
+close the current tab,CLOSE_TAB
+exit tab,CLOSE_TAB
+shut it down,CLOSE_TAB
+close browser tab,CLOSE_TAB
+next tab,NEXT_TAB
+go to next tab,NEXT_TAB
+move to the right tab,NEXT_TAB
+switch to next tab,NEXT_TAB
+show next tab,NEXT_TAB
+forward tab,NEXT_TAB
+right tab,NEXT_TAB
+next please,NEXT_TAB
+change to next tab,NEXT_TAB
+open next one,NEXT_TAB
+previous tab,PREVIOUS_TAB
+go back a tab,PREVIOUS_TAB
+last tab,PREVIOUS_TAB
+left tab,PREVIOUS_TAB
+switch to previous tab,PREVIOUS_TAB
+go to earlier tab,PREVIOUS_TAB
+back one tab,PREVIOUS_TAB
+show last tab,PREVIOUS_TAB
+move left tab,PREVIOUS_TAB
+previous please,PREVIOUS_TAB
+go back,GO_BACK
+back page,GO_BACK
+go to last page,GO_BACK
+return,GO_BACK
+previous page,GO_BACK
+take me back,GO_BACK
+back please,GO_BACK
+navigate back,GO_BACK
+go back one step,GO_BACK
+backtrack,GO_BACK
+go forward,GO_FORWARD
+next page,GO_FORWARD
+forward please,GO_FORWARD
+move ahead,GO_FORWARD
+forward page,GO_FORWARD
+continue forward,GO_FORWARD
+step forward,GO_FORWARD
+navigate ahead,GO_FORWARD
+forward tab/page,GO_FORWARD
+move on,GO_FORWARD
+zoom in,ZOOM_IN
+enlarge page,ZOOM_IN
+make bigger,ZOOM_IN
+increase zoom,ZOOM_IN
+bigger screen,ZOOM_IN
+magnify,ZOOM_IN
+zoom closer,ZOOM_IN
+enlarge text,ZOOM_IN
+zoom more,ZOOM_IN
+bigger please,ZOOM_IN
+zoom out,ZOOM_OUT
+shrink page,ZOOM_OUT
+make smaller,ZOOM_OUT
+reduce zoom,ZOOM_OUT
+smaller screen,ZOOM_OUT
+minimize view,ZOOM_OUT
+zoom back,ZOOM_OUT
+reduce size,ZOOM_OUT
+smaller text,ZOOM_OUT
+zoom less,ZOOM_OUT
+fullscreen,FULL_SCREEN
+enter fullscreen,FULL_SCREEN
+make it fullscreen,FULL_SCREEN
+maximize screen,FULL_SCREEN
+show full screen,FULL_SCREEN
+fullscreen mode,FULL_SCREEN
+go fullscreen,FULL_SCREEN
+expand screen,FULL_SCREEN
+large screen,FULL_SCREEN
+view fullscreen,FULL_SCREEN
+exit fullscreen,EXIT_FULL_SCREEN
+leave fullscreen,EXIT_FULL_SCREEN
+normal screen,EXIT_FULL_SCREEN
+minimize fullscreen,EXIT_FULL_SCREEN
+restore window,EXIT_FULL_SCREEN
+back to normal,EXIT_FULL_SCREEN
+shrink fullscreen,EXIT_FULL_SCREEN
+turn off fullscreen,EXIT_FULL_SCREEN
+restore default size,EXIT_FULL_SCREEN
+out of fullscreen,EXIT_FULL_SCREEN
+open Gmail,OPEN_GMAIL
+launch Gmail,OPEN_GMAIL
+go to Gmail,OPEN_GMAIL
+start Gmail,OPEN_GMAIL
+open mail,OPEN_GMAIL
+check Gmail,OPEN_GMAIL
+show Gmail,OPEN_GMAIL
+Gmail please,OPEN_GMAIL
+access Gmail,OPEN_GMAIL
+go Gmail,OPEN_GMAIL
+open YouTube,OPEN_YOUTUBE
+launch YouTube,OPEN_YOUTUBE
+go to YouTube,OPEN_YOUTUBE
+start YouTube,OPEN_YOUTUBE
+show YouTube,OPEN_YOUTUBE
+access YouTube,OPEN_YOUTUBE
+play YouTube,OPEN_YOUTUBE
+YouTube please,OPEN_YOUTUBE
+bring up YouTube,OPEN_YOUTUBE
+open videos,OPEN_YOUTUBE
+open Google,OPEN_GOOGLE
+launch Google,OPEN_GOOGLE
+go to Google,OPEN_GOOGLE
+start Google,OPEN_GOOGLE
+search on Google,OPEN_GOOGLE
+Google please,OPEN_GOOGLE
+bring up Google,OPEN_GOOGLE
+access Google,OPEN_GOOGLE
+show Google,OPEN_GOOGLE
+open search,OPEN_GOOGLE
+open Facebook,OPEN_FACEBOOK
+launch Facebook,OPEN_FACEBOOK
+go to Facebook,OPEN_FACEBOOK
+start Facebook,OPEN_FACEBOOK
+show Facebook,OPEN_FACEBOOK
+access Facebook,OPEN_FACEBOOK
+Facebook please,OPEN_FACEBOOK
+open social,OPEN_FACEBOOK
+bring up Facebook,OPEN_FACEBOOK
+check Facebook,OPEN_FACEBOOK
+open Instagram,OPEN_INSTAGRAM
+launch Instagram,OPEN_INSTAGRAM
+go to Instagram,OPEN_INSTAGRAM
+start Instagram,OPEN_INSTAGRAM
+show Instagram,OPEN_INSTAGRAM
+access Instagram,OPEN_INSTAGRAM
+Instagram please,OPEN_INSTAGRAM
+check Instagram,OPEN_INSTAGRAM
+bring up Instagram,OPEN_INSTAGRAM
+Insta open,OPEN_INSTAGRAM
+open Twitter,OPEN_TWITTER
+launch Twitter,OPEN_TWITTER
+go to Twitter,OPEN_TWITTER
+start Twitter,OPEN_TWITTER
+show Twitter,OPEN_TWITTER
+access Twitter,OPEN_TWITTER
+Twitter please,OPEN_TWITTER
+bring up Twitter,OPEN_TWITTER
+check Twitter,OPEN_TWITTER
+open X,OPEN_TWITTER
+open LinkedIn,OPEN_LINKEDIN
+launch LinkedIn,OPEN_LINKEDIN
+go to LinkedIn,OPEN_LINKEDIN
+start LinkedIn,OPEN_LINKEDIN
+show LinkedIn,OPEN_LINKEDIN
+access LinkedIn,OPEN_LINKEDIN
+LinkedIn please,OPEN_LINKEDIN
+bring up LinkedIn,OPEN_LINKEDIN
+check LinkedIn,OPEN_LINKEDIN
+open jobs site,OPEN_LINKEDIN
+open WhatsApp,OPEN_WHATSAPP_WEB
+launch WhatsApp Web,OPEN_WHATSAPP_WEB
+go to WhatsApp,OPEN_WHATSAPP_WEB
+start WhatsApp,OPEN_WHATSAPP_WEB
+show WhatsApp,OPEN_WHATSAPP_WEB
+access WhatsApp Web,OPEN_WHATSAPP_WEB
+WhatsApp please,OPEN_WHATSAPP_WEB
+check WhatsApp,OPEN_WHATSAPP_WEB
+bring up WhatsApp,OPEN_WHATSAPP_WEB
+open chats,OPEN_WHATSAPP_WEB
+open Google Drive,OPEN_DRIVE
+launch Drive,OPEN_DRIVE
+go to Drive,OPEN_DRIVE
+start Drive,OPEN_DRIVE
+show Drive,OPEN_DRIVE
+access Google Drive,OPEN_DRIVE
+Drive please,OPEN_DRIVE
+bring up Drive,OPEN_DRIVE
+open storage,OPEN_DRIVE
+check Drive,OPEN_DRIVE
+open Google Maps,OPEN_MAPS
+launch Maps,OPEN_MAPS
+go to Maps,OPEN_MAPS
+start Maps,OPEN_MAPS
+show Maps,OPEN_MAPS
+access Google Maps,OPEN_MAPS
+Maps please,OPEN_MAPS
+bring up Maps,OPEN_MAPS
+open navigation,OPEN_MAPS
+check Maps,OPEN_MAPS
+open Calendar,OPEN_CALENDAR
+launch Calendar,OPEN_CALENDAR
+go to Calendar,OPEN_CALENDAR
+start Calendar,OPEN_CALENDAR
+show Calendar,OPEN_CALENDAR
+access Calendar,OPEN_CALENDAR
+Calendar please,OPEN_CALENDAR
+bring up Calendar,OPEN_CALENDAR
+check Calendar,OPEN_CALENDAR
+open schedule,OPEN_CALENDAR
+open news,OPEN_NEWS
+launch news,OPEN_NEWS
+go to news,OPEN_NEWS
+start news site,OPEN_NEWS
+show news,OPEN_NEWS
+access news,OPEN_NEWS
+news please,OPEN_NEWS
+bring up news,OPEN_NEWS
+check headlines,OPEN_NEWS
+open articles,OPEN_NEWS
+bookmark page,BOOKMARK_PAGE
+save this page,BOOKMARK_PAGE
+add to bookmarks,BOOKMARK_PAGE
+mark this site,BOOKMARK_PAGE
+save bookmark,BOOKMARK_PAGE
+bookmark this,BOOKMARK_PAGE
+store page,BOOKMARK_PAGE
+add bookmark,BOOKMARK_PAGE
+remember this page,BOOKMARK_PAGE
+favorite this page,BOOKMARK_PAGE
+open bookmarks,OPEN_BOOKMARKS
+show bookmarks,OPEN_BOOKMARKS
+access bookmarks,OPEN_BOOKMARKS
+bring up bookmarks,OPEN_BOOKMARKS
+bookmarks please,OPEN_BOOKMARKS
+load bookmarks,OPEN_BOOKMARKS
+display bookmarks,OPEN_BOOKMARKS
+get bookmarks,OPEN_BOOKMARKS
+see bookmarks,OPEN_BOOKMARKS
+view bookmarks,OPEN_BOOKMARKS
+open downloads,OPEN_DOWNLOADS
+show downloads,OPEN_DOWNLOADS
+access downloads,OPEN_DOWNLOADS
+bring up downloads,OPEN_DOWNLOADS
+downloads please,OPEN_DOWNLOADS
+check downloads,OPEN_DOWNLOADS
+load downloads,OPEN_DOWNLOADS
+get downloads,OPEN_DOWNLOADS
+view downloads,OPEN_DOWNLOADS
+see downloaded files,OPEN_DOWNLOADS
+open settings,OPEN_SETTINGS
+launch settings,OPEN_SETTINGS
+go to settings,OPEN_SETTINGS
+show settings,OPEN_SETTINGS
+access settings,OPEN_SETTINGS
+settings please,OPEN_SETTINGS
+bring up settings,OPEN_SETTINGS
+check settings,OPEN_SETTINGS
+load settings,OPEN_SETTINGS
+system settings,OPEN_SETTINGS
+close browser,CLOSE_BROWSER
+exit browser,CLOSE_BROWSER
+shut down browser,CLOSE_BROWSER
+quit browser,CLOSE_BROWSER
+close everything,CLOSE_BROWSER
+shut browser,CLOSE_BROWSER
+stop browser,CLOSE_BROWSER
+leave browser,CLOSE_BROWSER
+kill browser,CLOSE_BROWSER
+exit application,CLOSE_BROWSER

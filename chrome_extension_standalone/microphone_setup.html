@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microphone Setup - Voice Web Accessibility</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    h1 {
+      color: #667eea;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    
+    .step {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    
+    .step-number {
+      background: #667eea;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .step-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .step-content {
+      color: #555;
+      line-height: 1.6;
+      margin-left: 40px;
+    }
+    
+    .screenshot {
+      background: #e9ecef;
+      border: 2px dashed #667eea;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin: 15px 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+    
+    .button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+    
+    .button:hover {
+      background: #5568d3;
+    }
+    
+    .note {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      color: #856404;
+    }
+    
+    .emoji {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎤 Microphone Setup Required</h1>
+    <p class="subtitle">Follow these steps to enable voice control</p>
+    
+    <div class="step">
+      <div class="step-title">
+        <span class="step-number">1</span>
+        Look for the Icon in Address Bar
+      </div>
+      <div class="step-content">
+        When you click "Start Voice Control", Chrome will show a <strong>camera/microphone icon</strong> 🎤 in the address bar (next to the URL).
+        <div class="screenshot">
+          📍 Address bar → Look for 🎤 or 📷 icon
+        </div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-title">
+        <span class="step-number">2</span>
+        Click the Icon and Allow Access
+      </div>
+      <div class="step-content">
+        Click the microphone icon and select:
+        <ul style="margin-top: 10px; margin-left: 20px;">
+          <li><strong>"Always allow"</strong> or <strong>"Allow"</strong></li>
+          <li>Make sure your microphone is selected</li>
+        </ul>
+        <div class="screenshot">
+          ✅ Select "Always allow" for this extension
+        </div>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-title">
+        <span class="step-number">3</span>
+        Test Your Microphone
+      </div>
+      <div class="step-content">
+        After allowing access:
+        <ol style="margin-top: 10px; margin-left: 20px;">
+          <li>Click the extension icon in your toolbar</li>
+          <li>Click <strong>"Start Voice Control"</strong></li>
+          <li>Badge should turn <strong style="color: #00aa00;">GREEN 🟢</strong></li>
+          <li>Say: <strong>"scroll down"</strong></li>
+        </ol>
+      </div>
+    </div>
+    
+    <div class="note">
+      <strong><span class="emoji">💡</span>Tip:</strong> If Chrome doesn't show the microphone icon, try:
+      <ul style="margin-top: 10px; margin-left: 30px;">
+        <li>Go to: <code>chrome://settings/content/microphone</code></li>
+        <li>Make sure microphone is not blocked</li>
+        <li>Add this extension to "Allow" list</li>
+        <li>Reload the extension and try again</li>
+      </ul>
+    </div>
+    
+    <button class="button" onclick="window.close()">
+      ✅ Got It! Let's Start
+    </button>
+    
+    <div style="text-align: center; margin-top: 20px; color: #999;">
+      <small>Close this tab and click the extension icon to begin</small>
+    </div>
+  </div>
+  
+  <script>
+    console.log('✅ Microphone setup page loaded');
+  </script>
+</body>
+</html>

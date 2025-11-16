@@ -1,0 +1,178 @@
+==========================================
+VOICE WEB ACCESSIBILITY - COMMAND LIST
+==========================================
+
+NAVIGATION COMMANDS:
+- "scroll down" - Scroll page down
+- "scroll up" - Scroll page up
+- "page down" - Scroll page down
+- "page up" - Scroll page up
+- "go back" - Go to previous page
+- "back" - Go to previous page
+- "go forward" - Go to next page
+- "forward" - Go to next page
+- "refresh" - Reload current page
+- "reload" - Reload current page
+- "scroll to top" - Scroll to top of page
+- "scroll to bottom" - Scroll to bottom of page
+
+TAB MANAGEMENT:
+- "open new tab" - Open a new tab
+- "new tab" - Open a new tab
+- "close tab" - Close current tab
+- "exit tab" - Close current tab
+- "next tab" - Switch to next tab
+- "previous tab" - Switch to previous tab
+
+BROWSER CONTROL:
+- "close browser" - Close current browser window
+- "exit chrome" - Close current browser window
+- "quit browser" - Close current browser window
+
+READING COMMANDS:
+- "read page" - Read main content of page aloud
+- "read this" - Read main content of page aloud
+- "speak content" - Read main content of page aloud
+- "stop" - Stop reading/speaking
+- "pause" - Stop reading/speaking
+- "quiet" - Stop reading/speaking
+
+SEARCH COMMANDS:
+- "search google for [query]" - Search Google
+- "google [query]" - Search Google
+- "find [query]" - Search Google
+- "search youtube for [query]" - Search YouTube
+
+LINK NAVIGATION (Works on ANY page):
+- "open first link" - Click 1st visible link
+- "open second link" - Click 2nd visible link
+- "open third link" - Click 3rd visible link
+- "open fourth link" - Click 4th visible link
+- "open fifth link" - Click 5th visible link
+- "click first" - Click 1st visible link
+- "click second" - Click 2nd visible link
+- ...up to "tenth link"
+
+You can also say link numbers:
+- "open link 1" to "open link 10"
+- Works with ANY number up to 20 links!
+
+ZOOM CONTROLS:
+- "zoom in" - Increase page zoom
+- "zoom out" - Decrease page zoom
+- "reset zoom" - Reset zoom to 100%
+
+QUICK WEBSITES:
+- "open google" - Open Google.com
+- "open gmail" - Open Gmail
+- "open youtube" - Open YouTube
+
+BOOKMARKS:
+- "bookmark page" - Save current page
+- "open bookmarks" - Open bookmarks manager
+
+==========================================
+USAGE TIPS:
+==========================================
+
+1. SPEAK CLEARLY:
+   - Use normal speaking voice
+   - Don't shout or pause mid-command
+   - Say command in one breath
+
+2. WAIT FOR CONFIRMATION:
+   - Each command speaks feedback
+   - Wait to hear confirmation before next command
+   - Example: "Scrolling down" → Then say next
+
+3. LINK NAVIGATION:
+   - Links are filtered to show ONLY visible, meaningful links
+   - Hidden navigation, ads are automatically skipped
+   - Say any number 1-20 to open that link
+   - Example: On Google search results, "open first link" opens first search result
+
+4. READ PAGE:
+   - Focuses on main article content
+   - Automatically skips menus, ads, headers, footers
+   - Reads up to 8,000 characters
+   - Say "stop" anytime to interrupt
+
+5. BEST RESULTS:
+   - Keep voice control tab open (can minimize window)
+   - Works on ANY tab once voice control is active
+   - Pin the voice control tab for convenience
+   - Use exact command phrases listed above
+
+==========================================
+HOW TO USE:
+==========================================
+
+1. FIRST TIME SETUP:
+   - Click extension icon
+   - Click "Start Voice Control"
+   - Voice control page opens
+   - Click anywhere on page
+   - Allow microphone when prompted
+   - You're ready!
+
+2. DAILY USE:
+   - Voice control page stays open (pinned tab)
+   - Status shows "🎤 Listening..."
+   - Open any website
+   - Say commands from list above
+   - Commands work on ANY tab!
+
+3. EXAMPLE WORKFLOW:
+   You: "search google for weather"
+   [Google search opens]
+   You: "open first link"
+   [First result opens]
+   You: "read page"
+   [Page content is read aloud]
+   You: "scroll down"
+   [Page scrolls]
+   You: "stop"
+   [Reading stops]
+
+==========================================
+TROUBLESHOOTING:
+==========================================
+
+Commands not working?
+- Check voice control tab is open
+- Status should show "Listening..."
+- Reload extension: chrome://extensions/
+- Close and reopen voice control tab
+
+Links opening wrong pages?
+- Extension now filters to VISIBLE links only
+- Hidden navigation links are automatically skipped
+- If problems persist, check console (F12)
+
+Voice not recognized?
+- Speak clearly in normal voice
+- Check microphone is working
+- Try saying command exactly as listed
+- Check console shows "Recognized: [your command]"
+
+No sound/TTS?
+- Check system volume
+- Check Chrome TTS: chrome://settings/accessibility
+- Check speaker/headphones connected
+
+==========================================
+ACCESSIBILITY FEATURES:
+==========================================
+
+✓ Complete voice control - no mouse needed
+✓ Text-to-speech feedback for every action
+✓ Smart page reading (main content only)
+✓ Filtered link navigation (visible links only)
+✓ Works across ALL tabs globally
+✓ Continuous listening mode
+✓ Perfect for blind/disabled users
+
+==========================================
+Created for blind and disabled users
+Voice-based web accessibility extension
+==========================================

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Control Active</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    body:hover {
+      background: linear-gradient(135deg, #7c8ef3 0%, #8a5bb5 100%);
+    }
+    .container {
+      text-align: center;
+      max-width: 500px;
+      user-select: none;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .status {
+      background: rgba(255,255,255,0.2);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 20px 0;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .status:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+    .status.listening {
+      background: rgba(0,255,0,0.3);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { 
+        opacity: 1; 
+        box-shadow: 0 4px 20px rgba(0,255,0,0.5);
+      }
+      50% { 
+        opacity: 0.8; 
+        box-shadow: 0 4px 30px rgba(0,255,0,0.8);
+      }
+    }
+    .command {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-family: monospace;
+      min-height: 60px;
+    }
+    #lastCommand {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+    .info {
+      margin-top: 30px;
+      font-size: 0.95em;
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    .clickme {
+      margin-top: 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎤 Voice Control Center</h1>
+    <div id="status" class="status">👆 Click Here to Start Listening</div>
+    <div class="command">
+      <strong>Last Command:</strong>
+      <div id="lastCommand">Waiting for commands...</div>
+    </div>
+    <div class="info">
+      ✓ Keep this tab open (you can minimize the window)<br>
+      ✓ Voice commands work from <strong>any tab</strong><br>
+      ✓ Say "scroll down", "go back", "read page", etc.<br>
+      ✓ Click anywhere on this page to start/restart
+    </div>
+    <div class="clickme">👇 Click Anywhere on This Page 👇</div>
+  </div>
+  <script src="voice_control.js"></script>
+</body>
+</html>

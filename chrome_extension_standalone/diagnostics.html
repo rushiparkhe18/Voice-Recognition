@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Control Diagnostics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    .test {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border-left: 4px solid #ddd;
+    }
+    .test.pass {
+      border-left-color: #4caf50;
+      background: #f1f8f4;
+    }
+    .test.fail {
+      border-left-color: #f44336;
+      background: #fef1f0;
+    }
+    .test.pending {
+      border-left-color: #ff9800;
+      background: #fff8f0;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .log {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: monospace;
+      font-size: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+    .log-entry {
+      margin: 5px 0;
+    }
+    .log-success { color: #4caf50; }
+    .log-error { color: #f44336; }
+    .log-info { color: #2196f3; }
+    .log-warning { color: #ff9800; }
+  </style>
+</head>
+<body>
+  <h1>🔧 Voice Control Extension Diagnostics</h1>
+  <p>This tool will help diagnose why voice control is not working.</p>
+
+  <div id="test1" class="test pending">
+    <h3>Test 1: Speech Recognition Support</h3>
+    <p id="test1-result">Checking...</p>
+  </div>
+
+  <div id="test2" class="test pending">
+    <h3>Test 2: Create Speech Recognition Object</h3>
+    <p id="test2-result">Waiting...</p>
+  </div>
+
+  <div id="test3" class="test pending">
+    <h3>Test 3: Request Microphone Permission</h3>
+    <p id="test3-result">Click the button below to test</p>
+    <button id="test3-btn" onclick="testMicPermission()">🎤 Test Microphone Permission</button>
+  </div>
+
+  <div id="test4" class="test pending">
+    <h3>Test 4: Start Speech Recognition</h3>
+    <p id="test4-result">Complete Test 3 first</p>
+    <button id="test4-btn" onclick="testSpeechRecognition()" disabled>🗣️ Test Speech Recognition</button>
+  </div>
+
+  <div id="test5" class="test pending">
+    <h3>Test 5: Background Communication</h3>
+    <p id="test5-result">Waiting...</p>
+    <button id="test5-btn" onclick="testBackgroundComm()">📡 Test Background Messaging</button>
+  </div>
+
+  <h2>📋 Diagnostic Log</h2>
+  <div id="log" class="log"></div>
+
+  <button onclick="copyLog()">📋 Copy Log to Clipboard</button>
+  <button onclick="location.reload()">🔄 Restart Tests</button>
+
+  <script>
+    const logDiv = document.getElementById('log');
+    let logText = '';
+
+    function log(message, type = 'info') {
+      const timestamp = new Date().toLocaleTimeString();
+      const entry = `[${timestamp}] ${message}`;
+      logText += entry + '\n';
+      
+      const classes = {
+        'success': 'log-success',
+        'error': 'log-error',
+        'info': 'log-info',
+        'warning': 'log-warning'
+      };
+      
+      const div = document.createElement('div');
+      div.className = `log-entry ${classes[type] || 'log-info'}`;
+      div.textContent = entry;
+      logDiv.appendChild(div);
+      logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    function setTestStatus(testId, status, message) {
+      const testDiv = document.getElementById(testId);
+      const resultP = document.getElementById(testId + '-result');
+      
+      testDiv.className = `test ${status}`;
+      resultP.innerHTML = message;
+    }
+
+    // Test 1: Speech Recognition Support
+    log('🔍 Starting diagnostics...', 'info');
+    
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      setTestStatus('test1', 'pass', '✅ Speech Recognition API is supported in this browser!');
+      log('✅ Speech Recognition API found', 'success');
+    } else {
+      setTestStatus('test1', 'fail', '❌ Speech Recognition API is NOT supported. Use Google Chrome.');
+      log('❌ Speech Recognition API not found', 'error');
+    }
+
+    // Test 2: Create Speech Recognition Object
+    let recognition = null;
+    try {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
+      setTestStatus('test2', 'pass', '✅ Successfully created SpeechRecognition object!');
+      log('✅ SpeechRecognition object created', 'success');
+      log(`   - Constructor: ${SpeechRecognition.name}`, 'info');
+    } catch (e) {
+      setTestStatus('test2', 'fail', `❌ Failed to create SpeechRecognition object: ${e.message}`);
+      log(`❌ Failed to create SpeechRecognition: ${e.message}`, 'error');
+    }
+
+    // Test 3: Microphone Permission
+    async function testMicPermission() {
+      log('🎤 Requesting microphone permission...', 'info');
+      const btn = document.getElementById('test3-btn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Requesting...';
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        setTestStatus('test3', 'pass', '✅ Microphone permission granted! Audio stream acquired.');
+        log('✅ Microphone permission GRANTED', 'success');
+        log(`   - Audio tracks: ${stream.getAudioTracks().length}`, 'info');
+        log(`   - Track label: ${stream.getAudioTracks()[0].label}`, 'info');
+        
+        // Stop the stream
+        stream.getTracks().forEach(track => track.stop());
+        
+        // Enable next test
+        document.getElementById('test4-btn').disabled = false;
+        btn.textContent = '✅ Permission Granted';
+        btn.style.background = '#4caf50';
+      } catch (e) {
+        setTestStatus('test3', 'fail', `❌ Microphone permission denied: ${e.name} - ${e.message}`);
+        log(`❌ Microphone permission DENIED: ${e.name}`, 'error');
+        log(`   - Message: ${e.message}`, 'error');
+        log(`   - To fix: Click the 🔒 icon in URL bar → Allow microphone`, 'warning');
+        
+        btn.disabled = false;
+        btn.textContent = '🎤 Try Again';
+      }
+    }
+
+    // Test 4: Speech Recognition
+    function testSpeechRecognition() {
+      log('🗣️ Testing speech recognition...', 'info');
+      const btn = document.getElementById('test4-btn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Listening...';
+
+      if (!recognition) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+      }
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+
+      recognition.onstart = () => {
+        log('✅ Speech recognition STARTED', 'success');
+        setTestStatus('test4', 'pending', '🎤 Listening... Say something!');
+      };
+
+      recognition.onresult = (event) => {
+        const text = event.results[0][0].transcript;
+        const confidence = event.results[0][0].confidence;
+        
+        log(`✅ Speech RECOGNIZED: "${text}"`, 'success');
+        log(`   - Confidence: ${(confidence * 100).toFixed(1)}%`, 'info');
+        
+        setTestStatus('test4', 'pass', `✅ Speech recognition works! Heard: "${text}" (${(confidence * 100).toFixed(1)}% confidence)`);
+        
+        btn.disabled = false;
+        btn.textContent = '✅ Test Again';
+        btn.style.background = '#4caf50';
+      };
+
+      recognition.onerror = (event) => {
+        log(`❌ Speech recognition ERROR: ${event.error}`, 'error');
+        log(`   - Message: ${event.message || 'No message'}`, 'error');
+        
+        if (event.error === 'not-allowed') {
+          setTestStatus('test4', 'fail', '❌ Microphone access denied. Check browser permissions.');
+          log('   - Solution: Allow microphone in browser settings', 'warning');
+        } else if (event.error === 'no-speech') {
+          setTestStatus('test4', 'fail', '❌ No speech detected. Try speaking louder or check microphone.');
+          log('   - Solution: Speak clearly into microphone', 'warning');
+        } else {
+          setTestStatus('test4', 'fail', `❌ Error: ${event.error}`);
+        }
+        
+        btn.disabled = false;
+        btn.textContent = '🔄 Try Again';
+      };
+
+      recognition.onend = () => {
+        log('🛑 Speech recognition ENDED', 'info');
+        btn.disabled = false;
+        if (btn.textContent === '⏳ Listening...') {
+          btn.textContent = '🔄 Try Again';
+        }
+      };
+
+      try {
+        recognition.start();
+        log('   - Recognition start() called', 'info');
+      } catch (e) {
+        log(`❌ Failed to start recognition: ${e.message}`, 'error');
+        setTestStatus('test4', 'fail', `❌ Failed to start: ${e.message}`);
+        btn.disabled = false;
+        btn.textContent = '🔄 Try Again';
+      }
+    }
+
+    // Test 5: Background Communication
+    function testBackgroundComm() {
+      log('📡 Testing background messaging...', 'info');
+      const btn = document.getElementById('test5-btn');
+      btn.disabled = true;
+
+      try {
+        chrome.runtime.sendMessage({ type: 'ping' }, (response) => {
+          if (chrome.runtime.lastError) {
+            log(`❌ Background messaging ERROR: ${chrome.runtime.lastError.message}`, 'error');
+            setTestStatus('test5', 'fail', `❌ Failed to communicate with background: ${chrome.runtime.lastError.message}`);
+          } else {
+            log('✅ Background messaging works!', 'success');
+            log(`   - Response: ${JSON.stringify(response)}`, 'info');
+            setTestStatus('test5', 'pass', '✅ Successfully communicated with background script!');
+          }
+          btn.disabled = false;
+        });
+      } catch (e) {
+        log(`❌ Exception during messaging: ${e.message}`, 'error');
+        setTestStatus('test5', 'fail', `❌ Exception: ${e.message}`);
+        btn.disabled = false;
+      }
+    }
+
+    function copyLog() {
+      const systemInfo = `
+=== SYSTEM INFORMATION ===
+User Agent: ${navigator.userAgent}
+Chrome Version: ${navigator.appVersion}
+Speech Recognition: ${('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) ? 'Supported' : 'Not Supported'}
+Timestamp: ${new Date().toLocaleString()}
+
+=== DIAGNOSTIC LOG ===
+`;
+      navigator.clipboard.writeText(systemInfo + logText);
+      alert('✅ Log copied to clipboard!');
+      log('📋 Log copied to clipboard', 'success');
+    }
+
+    log('✅ Diagnostic tool loaded', 'success');
+    log('👆 Click buttons above to run tests', 'info');
+  </script>
+</body>
+</html>

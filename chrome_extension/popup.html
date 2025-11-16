@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+    .status {
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .status-indicator {
+      font-size: 24px;
+      display: inline-block;
+    }
+    .commands {
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .command {
+      margin: 5px 0;
+      padding: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎤 Voice Web Accessibility</h2>
+  
+  <div class="status">
+    <span class="status-indicator" id="status">🟢</span>
+    <span id="statusText">Connected to Python backend</span>
+  </div>
+  
+  <div class="commands">
+    <strong>Quick Commands:</strong>
+    <div class="command">• "Scroll down" / "Scroll up"</div>
+    <div class="command">• "Go back" / "Go forward"</div>
+    <div class="command">• "New tab" / "Close tab"</div>
+    <div class="command">• "Read page" / "Stop reading"</div>
+    <div class="command">• "Zoom in" / "Zoom out"</div>
+    <div class="command">• "Open Gmail" / "Open YouTube"</div>
+    <div class="command">• "Search Google for [query]"</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+============================================================
+ESSENTIAL COMMANDS TEST CHECKLIST
+============================================================
+
+
+READING (Priority 1 - CRITICAL)
+-------------------------------
+[ ] 1. "read page"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "stop reading"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 3. "read selection"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+NAVIGATION (Priority 2)
+-----------------------
+[ ] 1. "scroll down"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "scroll up"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 3. "go back"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 4. "go forward"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 5. "refresh"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+TABS (Priority 3)
+-----------------
+[ ] 1. "new tab"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "close tab"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 3. "next tab"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 4. "previous tab"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+ZOOM (Priority 4)
+-----------------
+[ ] 1. "zoom in"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "zoom out"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 3. "reset zoom"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+SEARCH (Priority 5)
+-------------------
+[ ] 1. "search google for weather"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "search youtube for music"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+WEBSITES (Priority 6)
+---------------------
+[ ] 1. "open google"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 2. "open gmail"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+[ ] 3. "open youtube"
+    - Recognized? [ ]
+    - Executed? [ ]
+    - Audio feedback? [ ]
+
+
+============================================================
+TOTAL TESTS: 20
+============================================================
